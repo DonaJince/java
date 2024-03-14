@@ -15,7 +15,7 @@ class matrix
 		{
 			for(j=1;j<=c;j++)
 			{
-				this.mat[i][j]=scan.nextInt();
+				mat[i][j]=scan.nextInt();
 			}
 		}
 		
