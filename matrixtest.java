@@ -1,3 +1,4 @@
+/*Read two matrices from the console and perform matrix addition.*/
 import java.util.Scanner;
 class matrix
 {

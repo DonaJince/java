@@ -1,3 +1,4 @@
+/*Program to create static and non static methods.*/
 import java.util.*;
 class sample
 {
