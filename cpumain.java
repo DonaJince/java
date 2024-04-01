@@ -22,7 +22,7 @@ class cpu
 			System.out.println("processor manufacturer:"+price);
 		}
 	}
-	public static class ram
+	static class ram
 	{
 		String memory;
 		String manufacturer;
