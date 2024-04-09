@@ -60,13 +60,34 @@ class teacher extends employee
 		System.out.println("department:"+department);
 		System.out.println("teacherid:"+teacherid);
 	}
+	void getvalue()
+	{
+		System.out.println("name:");
+		System.out.println("gender:");
+		System.out.println("address:");
+		System.out.println("age:");
+		System.out.println("empid:");
+		System.out.println("companyname:");
+		System.out.println("qualification:");
+		System.out.println("salary:");
+		System.out.println("subject:");
+		System.out.println("department:");
+		System.out.println("teacherid:");
+	}
 }
 class teachermain()
 {
 	public static void main(String arg[])
 	{
 		Scanner scan=new Scanner;
-		
+		System.out.println("enter the number of teachers:")
+		int n=scan.nextInt();
+		for(int i=0;i<=n;i++)
+		{
+			teacher t[i]=new teacher[n];
+			System.out.println("enter the details of "+i+"th teacher");
+			t[i].getvalue()
+		}
 	}
 }
 
