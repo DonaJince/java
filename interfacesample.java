@@ -1,15 +1,18 @@
 //interface sample program
 interface i
 {
+	int x=10;
 	 void fun1();
 	 void fun2();
 }
 class demo implements i
 {
+	int x=20;
 	int data=12;
 	public void fun1()
 	{
 		System.out.println("fun1 data:"+data);
+		System.out.println(x);
 	}
 	public void fun2()
 	{
