@@ -6,6 +6,7 @@ display details of N teachers.
 
 10.2 Create classes Student and Sports. Create another class Result inherited from Student and Sports. Display
 the Academic and Sports score of a student.*/
+import java.util.Scanner;
 class person
 {
 	String name;
@@ -25,13 +26,14 @@ class employee extends person
 	int empid;
 	String companyname;
 	String qualification;
-	float salary;
-	employee(int a,String b,String c,float d)
+	Double salary;
+	employee(String a,String b,String c,int d,int e,String f,String g,Double h)
 	{
-		empid=a;
-		companyname=b;
-		qualification=c;
-		salary=d;
+		super(a,b,c,d);
+		empid=e;
+		companyname=f;
+		qualification=g;
+		salary=h;
 	}
 }
 class teacher extends employee
@@ -39,11 +41,13 @@ class teacher extends employee
 	String subject;
 	String department;
 	int teacherid;
-	teacher(String a,String b,int c)
+	Scanner scan=new Scanner(System.in);
+	teacher(String a,String b,String c,int d,int e,String f,String g,Double h,String i,String j,int k)
 	{
-		subject=a;
-		department=b;
-		 teacherid=c;
+		super(a,b,c,d,e,f,g,h);
+		subject=i;
+		department=j;
+		 teacherid=k;
 	}
 	void display()
 	{
@@ -60,33 +64,47 @@ class teacher extends employee
 		System.out.println("department:"+department);
 		System.out.println("teacherid:"+teacherid);
 	}
-	void getvalue()
-	{
-		System.out.println("name:");
-		System.out.println("gender:");
-		System.out.println("address:");
-		System.out.println("age:");
-		System.out.println("empid:");
-		System.out.println("companyname:");
-		System.out.println("qualification:");
-		System.out.println("salary:");
-		System.out.println("subject:");
-		System.out.println("department:");
-		System.out.println("teacherid:");
-	}
 }
-class teachermain()
+class teachermain
 {
 	public static void main(String arg[])
 	{
-		Scanner scan=new Scanner;
-		System.out.println("enter the number of teachers:")
+		Scanner scan=new Scanner(System.in);
+		Scanner scan1=new Scanner(System.in);
+		System.out.println("enter the number of teachers:");
 		int n=scan.nextInt();
-		for(int i=0;i<=n;i++)
+		teacher t[]=new teacher[n];
+		for(int i=1;i<=n;i++)
 		{
-			teacher t[i]=new teacher[n];
 			System.out.println("enter the details of "+i+"th teacher");
-			t[i].getvalue()
+			System.out.println("enter name:");
+			String na=scan1.nextLine();
+			System.out.println("enter gender:");
+			String g=scan1.nextLine();
+			System.out.println("enter address:");
+			String a=scan1.nextLine();
+			System.out.println("enter age:");
+			int age=scan.nextInt();
+			System.out.println("enter empid:");
+			int e=scan.nextInt();
+			System.out.println("enter companyname:");
+			String c=scan1.nextLine();
+			System.out.println("enter qualification:");
+			String q=scan1.nextLine();
+			System.out.println("enter salary:");
+			Double s=scan.nextDouble();
+			System.out.println("enter subject:");
+			String su=scan1.nextLine();
+			System.out.println("enter department:");
+			String d=scan1.nextLine();
+			System.out.println("enter teacherid:");
+			int te=scan.nextInt();
+			t[i]=new teacher(na,g,a,age,e,c,q,s,su,d,te);
+		}
+		for(int i=1;i<=n;i++)
+		{
+			System.out.println("Details of "+i+"th teacher\n------------------------------------------------");
+			t[i].display();
 		}
 	}
 }
