@@ -20,23 +20,23 @@ class student
 }
 class sports extends student
 {
-	Double sportspoints;
+	Double sportsscores;
 	Scanner scan=new Scanner(System.in);
 	void getsports()
 	{
-		System.out.println("enter student sports point:");
-		sportspoints=scan.nextDouble();
+		System.out.println("enter student sports scores:");
+		sportsscores=scan.nextDouble();
 	}
 }
 class result extends sports
 {
 	void display()
 	{
-		System.out.println("STUDENT DETAILS\n------------------------");
+		System.out.println("STUDENT RESULT\n------------------------");
 		System.out.println("name:"+name);
 		System.out.println("rollno:"+roll);
 		System.out.println("marks:"+mark);
-		System.out.println("sports points:"+sportspoints);
+		System.out.println("sports scores:"+sportsscores);
 	}
 }
 class studentmain
