@@ -3,9 +3,7 @@
 Salary and its own constructor. Create another class ‘Teacher’ that inherits the properties of class Employee and contains its own data
 members like Subject, Department, Teacherid and contain constructors and methods to display the data members. Use array of objects to
 display details of N teachers. 
-
-10.2 Create classes Student and Sports. Create another class Result inherited from Student and Sports. Display
-the Academic and Sports score of a student.*/
+*/
 import java.util.Scanner;
 class person
 {
@@ -73,7 +71,7 @@ class teachermain
 		Scanner scan1=new Scanner(System.in);
 		System.out.println("enter the number of teachers:");
 		int n=scan.nextInt();
-		teacher t[]=new teacher[n];
+		teacher t[]=new teacher[100];
 		for(int i=1;i<=n;i++)
 		{
 			System.out.println("enter the details of "+i+"th teacher");
