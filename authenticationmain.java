@@ -7,7 +7,7 @@ class authexception extends Exception
         super(message);
     }
 }
-class authentication extends Exception
+class authentication
 {
 	String username="admin";
 	String password="123";
