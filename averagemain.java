@@ -7,12 +7,12 @@ class negexception extends Exception
 		super(message);	
 	}
 }
-class average 
+class averagemain 
 {
-	int num[]=new int[20];
-	Scanner scan=new Scanner(System.in);
-	public void get() throws negexception
+	public static void main(String a[])
 	{
+		int num[]=new int[20];
+		Scanner scan=new Scanner(System.in);
 		Double avg=0.0;
 		System.out.println("enter the limit:");
 		int n=scan.nextInt();
@@ -20,28 +20,24 @@ class average
 		for(int i=1;i<=n;i++)
 		{
 			num[i]=scan.nextInt();
-			if(num[i]<0)
+			try
 			{
-				throw  new negexception("you entered a negative number");
+				if(num[i]<0)
+				{
+					i--;
+					throw  new negexception("you have entered a negative number,plz enter positive numbers");
+				}
+				else
+					avg=avg+num[i];
 			}
-			avg=avg+num[i];
+			catch(negexception e)
+			{
+				System.out.println(e);
+			}
+			
 		}
 		System.out.println("Average:"+avg/n);
-	}
-}
-class averagemain 
-{
-	public static void main(String a[])
-	{
-		average ob=new average();
-		try
-		{
-			ob.get();
-		}
-		catch(negexception e)
-		{
-			System.out.println(e);
-		}
+		
 	}
 	
 }
