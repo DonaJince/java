@@ -41,12 +41,14 @@ class fibeventhread
     {
 		fibonaaci f=new fibonaaci(10);
 		even e=new even(10);
-		Thread t1=new Thread(f);
-		Thread t2=new Thread(e);
+		Thread t1=new Thread(f,"fibonaaci");
+		Thread t2=new Thread(e,"even");
 		System.out.println("first 10 fibonaaci numbers :");
 		t1.start();
 		System.out.println("even numbers up to 10:");
 		t2.start();
+		System.out.println("name of thread t1 :"+t1.getName());
+		System.out.println("name of thread t2 :"+t2.getName());
 	}
 }
 
