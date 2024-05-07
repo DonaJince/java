@@ -13,6 +13,7 @@ class authentication
 	String password="123";
 	public void auth( String u,String p) throws authexception
 	{
+		int r=2/0;
 		if(username.equals(u) && password.equals(p))
 			throw new authexception("login succesfull!!!");
 		else
@@ -23,7 +24,7 @@ class authenticationmain
 {
 	public static void main(String a[])
 	{
-		authentication ob=new  authentication();
+		authentication ob=new authentication();
 		Scanner scan=new Scanner(System.in);
 		System.out.println("enter username:");
 		String u=scan.nextLine();
