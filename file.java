@@ -3,48 +3,23 @@ import java.io.*;
 import java.util.Scanner;
 class file
 {
-	public static  void write(String f,String c)
-	{
-	try{
-			FileWriter fw=new FileWriter(f,true);
-			fw.write(c);
-			fw.close();
-	      }
-	      catch(Exception e)
-	      {
-	      	System.out.println("error while writing into file");
-	      }
-	}
-	public static  void read(String f)
-	{
-	try{
-		FileReader fw=new FileReader(f);
-		BufferedReader br=new BufferedReader(fw);
-		String data;
-		System.out.println("content of file:");
-		while((data=br.readLine())!=null)
-		{
-			System.out.println(data);
-		}
-		br.close();
-		}
-		 catch(Exception e)
-	     	 {
-	     	 	System.out.println("error while reading the file");
-	     	 }
-	}
 	public static void main(String arg[])
 	{
 		String filename="example.txt";
-		Scanner scan=new Scanner(System.in);
-	          System.out.println("enter the content:(type exit to finish writing)");
-		String content =scan.nextLine();
-		while(!content.equals("exit"))
-		{
-		write(filename,content+"\n");
-		content =scan.nextLine();
+	      	try{
+			InputStreamReader in=new InputStreamReader(System.in);
+			BufferedReader br=new BufferedReader(in);
+			FileWriter fw=new FileWriter(f,true);
+			String data;
+			data=br.readLine();
+			fw.write(data);
+			System.out.println("content of file:");
+			fw.close();
+			br.close();
 		}
-		System.out.println("content is inserted");
-		read(filename);
+		 catch(Exception e)
+	     	 {
+	     	 	System.out.println("error occured");
+	     	 }
 	}
 }
