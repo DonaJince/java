@@ -42,20 +42,22 @@ public class  calculator extends Frame implements ActionListener
 	}	
 	public void actionPerformed(ActionEvent ae)
 	{
-		int a,b,result;
-		
+		int a,b;
 			a=Integer.parseInt(t1.getText());
 			b=Integer.parseInt(t2.getText());
 			if(ae.getSource()==b1)
-				result=a+b;
+				t3.setText(Integer.toString(a+b));
 			else if(ae.getSource()==b2)
-				result=a-b;
+				t3.setText(Integer.toString(a-b));
 			else if(ae.getSource()==b3)
-				result=a*b;
+				t3.setText(Integer.toString(a*b));
 			else
-				result=a/b;
-			t3.setText(Integer.toString(result));
-		
+			{
+				if(b==0)
+					t3.setText("ERROR");
+				else
+					t3.setText(Integer.toString(a/b));
+			}
 	}
 	public static void main(String arg[])
 	{
