@@ -7,8 +7,8 @@ class oddevenfile
 	try{
 			FileReader fr=new FileReader(f);
 			BufferedReader br=new BufferedReader(fr);
-			FileWriter o=new FileWriter("odd.txt",true);
-			FileWriter e=new FileWriter("even.txt",true);
+			FileWriter o=new FileWriter("odd.txt");
+			FileWriter e=new FileWriter("even.txt");
 			String i;
 			while((i=br.readLine()) !=null)
 			{
