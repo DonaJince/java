@@ -1,21 +1,13 @@
-read s
-len=${#s}
-for((i=0;i<len;i++))
+s1="dona"
+temp=""
+for((i=0;i<${#s1};i++))
 do
-arr[i]=${s:$i:1}
-done
-echo ${arr[@]}
-for ((i=0;i<len;i++))
+for((j=i+1;j<${#s1};j++))
 do
-for((j=i+1;j<len;j++))
-do
-if [[ ${arr[i]} > ${arr[j]} ]]
-then 
-temp=${arr[i]}
-arr[i]=${arr[j]}
-arr[j]=$temp
+if [[ ${s1:$i:1}>${s1:$j:1}  ]]
+then
+s1=${s1:0:$i}${s1:$j:1}${s1:$i+1:$j-$i-1}${s1:$i:1}${s1:$j+1}
 fi
 done
 done
-echo ${arr[@]}
-
+echo $s1
