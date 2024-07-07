@@ -1,5 +1,4 @@
 s1="dona"
-temp=""
 for((i=0;i<${#s1};i++))
 do
 for((j=i+1;j<${#s1};j++))
